@@ -1,0 +1,20 @@
+<template name="home">
+  <div class="panel panel-default">
+    <div class="panel-heading">Chat</div>
+    <div class="panel-body">
+      <div class="well">
+        {{#each message in messages}}
+          {{message.userName}} > {{message.content}}<br>
+        {{else}}
+          No messages found
+        {{/each}}
+      </div>
+      <div class="input-group">
+        <input type="text" class="form-control js-message-input" placeholder="What do you want to say?">
+        <span class="input-group-btn">
+          <button class="btn btn-default js-send-btn" type="button">Send!</button>
+        </span>
+      </div><!-- /input-group -->
+    </div>
+  </div>
+</template>
